@@ -1,0 +1,40 @@
+
+- play sound for no key
+- play sound for key used
+
+creative common license
+
+
+VFX:
+- smoke
+- hitImpact : effect, burning, smoke
+- bulletHoles (decals)
+- hit sound : wood, metal, soft, wall
+- hülse rausfliegen lassen, shotgun pumpen und hülse raus fliegen lassen. 
+
+- impact
+
+- Environement - Chasing Static
+
+BUG: - man kann keine item nehmen die weiter unten liegen, raycast geschichte machen
+
+!!! BUG: wenn in die luft geschossen wird gibt es kein sound und kein effect
+Lernen:
+- Visual Effects
+- Shader
+
+Design:
+- color for level
+- light
+- pflanzen
+- bäume 
+- möbel
+- gebäude
+
+1- model weapon
+1.2 - texture
+2- model zombie
+
+
+
+

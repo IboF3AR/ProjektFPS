@@ -1,0 +1,35 @@
+Notes and Infos:
+
+- Frameratelimit: 60,  camera sensitivity 64, at normal its 400
+- Basic Zombie HP :1080
+- Base Zombie Speed: 3.6f
+- Base Player Speed: 3.7f
+
+
+// Lizenzen
+Can public domain be used commercially?
+Anyone can use a public domain work without obtaining permission, but no one can ever own it. 
+An important wrinkle to understand about public domain material is that, while each work belongs to the public, collections of public domain works may be protected by copyright.
+
+Can I use Creative Commons 0 images for commercial use?
+Images licensed under Creative Commons 0 which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission
+
+Attribution 3.0 Unported (CC BY 3.0)
+You are free to:
+
+    Share — copy and redistribute the material in any medium or format
+    Adapt — remix, transform, and build upon the material
+    for any purpose, even commercially.
+
+This license is acceptable for Free Cultural Works.
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+
+
+
+Mp3 for long sound files (Music and ambient sounds)
+Wav for small sound files (Interface and game sounds)
+
+gimp: shift c for crop. Image/scale cubic interpolation. filter/map/tile seamless
+
+
