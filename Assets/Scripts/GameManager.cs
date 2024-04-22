@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
     private float message_timer;
     private float message_duration;
 
+    private void Start()
+    {
+        player.transform.parent = null;
+    }
+
     public void PauseGame()
     {  
         Time.timeScale = 0; 

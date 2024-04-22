@@ -1,0 +1,8 @@
+- Die FBX, mit der animation
+- Rig
+- Create avatar from copy dann das Avatar der FBX ohne anim auswählen (humanoid vorher)
+- Bake into pose bei allen
+- Dann erste kopieren etc.
+
+
+Damit rootmotion nicht wieder am Anfang geht -> Bake XZ raus
