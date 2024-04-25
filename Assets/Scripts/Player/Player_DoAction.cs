@@ -18,7 +18,7 @@ public class Player_DoAction : MonoBehaviour
 
     private void Start()
     {
-        player_Inputs = GetComponent<Player_Inputs>();
+        player_Inputs = Player_Inputs.Inst;
     }
 
     private void Update()
@@ -29,7 +29,7 @@ public class Player_DoAction : MonoBehaviour
 
     private void Check_Input()
     {
-        if(player_Inputs.Btn_E)
+        if(player_Inputs.Get_Btn_E())
         {
             DoAction();
         }

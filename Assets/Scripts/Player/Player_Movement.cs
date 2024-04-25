@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
 public class Player_Movement : MonoBehaviour
@@ -32,7 +33,7 @@ public class Player_Movement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         handleWeapon = GetComponent<Player_HandleWeapon>();
-        player_Inputs = GetComponent<Player_Inputs>();
+        player_Inputs = Player_Inputs.Inst;
         //handleCrossHair = GetComponent<Player_HandleCrossHair>();
         jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
@@ -48,7 +49,7 @@ public class Player_Movement : MonoBehaviour
     private void Move()
     {
         move = transform.right * xInput + transform.forward *zInput;
-        isMoving = (move.magnitude > 0.1f);
+        isMoving = (move.magnitude > 0.15f);
         controller.Move(move.normalized * speed * Time.deltaTime);
         if(flag_jump) velocity.y = jumpVelocity;
         velocity.y += gravity * Time.deltaTime;
@@ -57,9 +58,9 @@ public class Player_Movement : MonoBehaviour
 
     private void CheckInputs()
     {
-        xInput = player_Inputs.xInput;
-        zInput = player_Inputs.zInput;
-        flag_jump = player_Inputs.Btn_Space;
+        xInput = player_Inputs.movementInput.x * Time.deltaTime;
+        zInput = player_Inputs.movementInput.y * Time.deltaTime;
+        flag_jump = player_Inputs.Get_Btn_Space();;
     }
 
     private void CheckStates()

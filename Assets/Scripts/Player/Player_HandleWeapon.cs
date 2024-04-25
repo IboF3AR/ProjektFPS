@@ -31,7 +31,7 @@ public class Player_HandleWeapon : MonoBehaviour
     {
         ui_txt_bullets = GameObject.Find("ed_txt_bullets").GetComponent<TMP_Text>();
         StartCoroutine(TEST());
-        player_Inputs = GetComponent<Player_Inputs>();
+        player_Inputs = Player_Inputs.Inst;
         SetUpDefaultGun();
         handleCrossHair = FindObjectOfType<Player_HandleCrossHair>();
         handleCrossHair.SetUp(calmDuration);
@@ -44,6 +44,11 @@ public class Player_HandleWeapon : MonoBehaviour
             }
         }
         
+    }
+
+    void HookInputs()
+    {
+        //player_Inputs.inputs.InGame.
     }
 
     private void SetUpDefaultGun()
@@ -78,10 +83,10 @@ public class Player_HandleWeapon : MonoBehaviour
 
     private void Check_Input()
     {
-        if(player_Inputs.Btn_A1)
+        if(player_Inputs.Get_Btn_WS1())
         {
             ChangeGun(1);
-        } else if(player_Inputs.Btn_A2)
+        } else if(player_Inputs.Get_Btn_WS2())
         {
             ChangeGun(2);
         }
@@ -90,7 +95,7 @@ public class Player_HandleWeapon : MonoBehaviour
         if(player_Inputs.LeftMB)
         {
             TryToShoot();
-        }
+        } 
     }
 
     private void TryToShoot()

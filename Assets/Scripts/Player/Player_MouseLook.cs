@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player_MouseLook : MonoBehaviour
 {
      private Player_Inputs player_Inputs;
-    public float mouseSensitivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
     float mouseX, mouseY;
@@ -16,7 +15,7 @@ public class Player_MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        player_Inputs = GetComponentInParent<Player_Inputs>();
+        player_Inputs = Player_Inputs.Inst;
     }
 
     // Update is called once per frame
@@ -33,7 +32,7 @@ public class Player_MouseLook : MonoBehaviour
 
     private void Check_Input()
     {
-        mouseX = player_Inputs.mouseX * mouseSensitivity * Time.unscaledDeltaTime;
-        mouseY = player_Inputs.mouseY * mouseSensitivity * Time.unscaledDeltaTime;
+        mouseX = player_Inputs.mouseX * Time.unscaledDeltaTime;
+        mouseY = player_Inputs.mouseY * Time.unscaledDeltaTime;
     }
 }

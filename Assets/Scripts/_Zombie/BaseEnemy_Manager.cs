@@ -8,11 +8,11 @@ public class BaseEnemy_Manager : MonoBehaviour
     [SerializeField] private State startingState;
     [SerializeField] private State currentState;
     [Header("Core")]
-    public ActorCore_Detection detection;
-    public ActorCore_Movement_NavmeshAgent locomotion;
-    public Animator animator;
+    [HideInInspector] public ActorCore_Detection detection;
+    [HideInInspector] public ActorCore_Movement_NavmeshAgentAndRootMotion locomotion;
+    [HideInInspector] public Animator animator;
 
-    void Start()
+    void Awake()
     {
         SetComponents();
         currentState = startingState;
@@ -26,8 +26,9 @@ public class BaseEnemy_Manager : MonoBehaviour
     void SetComponents()
     {
         detection = GetComponent<ActorCore_Detection>();
-        animator = GetComponentInChildren<Animator>();
-        locomotion = GetComponent<ActorCore_Movement_NavmeshAgent>();
+        animator = GetComponent<Animator>();
+        Debug.Log("Animator : " + animator);
+        locomotion = GetComponent<ActorCore_Movement_NavmeshAgentAndRootMotion>();
     }
 
     void FixedUpdate()
@@ -41,6 +42,7 @@ public class BaseEnemy_Manager : MonoBehaviour
         if(currentState.TickAndShouldSwitch())
         {
             currentState = currentState.GetStateToSwitchTo();
+            currentState.OnStateEnter();
         }
     }
 

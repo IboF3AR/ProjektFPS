@@ -8,7 +8,6 @@ public class State_HuntTarget : State
     Transform target;
     private bool toAttack = false;
 
-
     override public void OnStateEnter()
     {
         if(target == null)
@@ -19,12 +18,14 @@ public class State_HuntTarget : State
     public override bool TickAndShouldSwitch()
     {
         // Reached Patroulpoint
+        /* 
         if(manager.locomotion.GetReached())
         {
             manager.locomotion.StopMovement();
             toAttack = true;
             return true;
         }
+        return false; */
         return false;
     }
 
@@ -37,5 +38,4 @@ public class State_HuntTarget : State
         }
         return null;
     }
-
 }

@@ -19,10 +19,7 @@ public class Player_Values : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.K))
-        {
-            TEST_takeDamage();
-        }
+        
     }
 
     private void TEST_takeDamage()

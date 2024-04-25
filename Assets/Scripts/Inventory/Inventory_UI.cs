@@ -44,8 +44,9 @@ public class Inventory_UI : MonoBehaviour
 
     private void Check_Input()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        if(Player_Inputs.Inst.Get_Btn_I())
         { 
+            Debug.Log("I PRESED");
             inventoryGameObject.SetActive(!inventoryGameObject.activeSelf); 
             if(inventoryGameObject.activeSelf) GetComponentInChildren<Scrollbar>().value = 1f; 
             player_Inputs.ResetAllInputs();
