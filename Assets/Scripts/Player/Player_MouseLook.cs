@@ -32,7 +32,7 @@ public class Player_MouseLook : MonoBehaviour
 
     private void Check_Input()
     {
-        mouseX = player_Inputs.mouseX * Time.unscaledDeltaTime;
-        mouseY = player_Inputs.mouseY * Time.unscaledDeltaTime;
+        mouseX = player_Inputs.mouseX * Time.deltaTime;
+        mouseY = player_Inputs.mouseY * Time.deltaTime;
     }
 }

@@ -6,7 +6,7 @@ public class Player_DoAction : MonoBehaviour
 {
     private Player_Inputs player_Inputs;
     [HideInInspector] public bool hasInteractableTarget = false; // info: used by player_interaction
-    public LayerMask ignoreLayerMask;
+    public LayerMask interactableLayer;
     public Interactable interaction_Target;
     private Interactable interactableChecker;
     private bool interaction_TargetIsStillInArea  = false;
@@ -37,7 +37,7 @@ public class Player_DoAction : MonoBehaviour
 
     private void CheckForInteractables()
     {
-        collidersInIArea = Physics.OverlapBox(interactionAreaCenter.position, iAreaSize, interactionAreaCenter.rotation, ignoreLayerMask);
+        collidersInIArea = Physics.OverlapBox(interactionAreaCenter.position, iAreaSize, interactionAreaCenter.rotation, interactableLayer);
         interaction_TargetIsStillInArea = false;
         foreach (var item in collidersInIArea)
         {

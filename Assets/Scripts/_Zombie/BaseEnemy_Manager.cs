@@ -27,7 +27,6 @@ public class BaseEnemy_Manager : MonoBehaviour
     {
         detection = GetComponent<ActorCore_Detection>();
         animator = GetComponent<Animator>();
-        Debug.Log("Animator : " + animator);
         locomotion = GetComponent<ActorCore_Movement_NavmeshAgentAndRootMotion>();
     }
 
