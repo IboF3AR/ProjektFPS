@@ -1,0 +1,58 @@
+Create Moonshine scene in unity
+
+Blender:
+- Arme
+- Körper
+- Oma 
+- Haus - interior
+- kleiner trommler
+- Schwarzer Dämon
+- leiche des Priesters
+- Speer
+- Kloster
+- fallender freund
+- frau in weißer farbe und roten augen.
+
+
+Enviroment:
+- Meer
+- Nebel
+- Post pro
+- Vögel
+- Tunnel
+- ratten im tunnel
+
+
+
+Programmieren:
+- Sprinten
+- speer kampf
+- einfaches inventar
+- Dialog system
+- Schlüssel
+- IK
+- Save
+
+
+Cutscenes:
+- siehe drehbuch
+
+
+Sound:
+- stimmen
+- footsteps
+- brennde bäume
+- trommel des kleine trommlers
+- meer rauschen
+- wald ambiente
+- ratten
+- vögel
+- speer angriff
+- tür
+- schlüssel
+- fallende leiche
+- schwarzer teufel
+
+Sonstiges:
+- Zeitung
+- Main menu
